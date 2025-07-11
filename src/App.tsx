@@ -5,20 +5,66 @@ import image3 from "./assets/images/image3.png";
 import image4 from "./assets/images/image4.png";
 import { AccountBookFilled } from "@ant-design/icons";
 import { Input } from "antd";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import axios from "axios";
+import CustomModal from "./components/CustomModal";
+
+const chanelId = -1002886819915;
 
 function App() {
     const [tel, setTel] = useState("+998 ");
 
+    const scrollToBottom = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+        });
+    };
+
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.currentTarget);
+        const name = formData.get("name");
+        const phone = formData.get("tel-nomer");
+
+        const message = `<b>Ismi:</b> ${name}\n<b>Nomer:</b> ${phone}`;
+
+        try {
+            await axios.post(
+                `https://api.telegram.org/bot8084795345:AAHviDo0hWjLWn7BftEAYaDZw0_06aBw5XA/sendMessage`,
+                {
+                    chat_id: chanelId,
+                    text: message,
+                    parse_mode: "HTML",
+                }
+            );
+            <CustomModal isOpen={true} />;
+            if (formRef.current) formRef.current.reset();
+            setTel("+998 ");
+        } catch (error) {
+            console.error("Xatolik:", error);
+            alert("Xatolik yuz berdi ❌");
+        }
+    };
+
     return (
         <div className="relative w-full min-h-screen overflow-hidden">
             <div
-                className="absolute inset-0 bg-cover bg-center opacity-30 -z-10"
-                style={{ backgroundImage: "url('/main-bg.jpg')" }}
+                className="absolute inset-0 bg-cover bg-center opacity-80 -z-10"
+                style={{ backgroundImage: "url('/bg-white.jpg')" }}
             />
 
             <div className="flex flex-col items-center justify-center pt-10 text-center text-white">
-                <img src={sardorImg} alt="Sardor" height={560} width={460} />
+                <img
+                    src={sardorImg}
+                    className="w-[1260px] h-[560px]"
+                    alt="Sardor"
+                    height={560}
+                    width={860}
+                />
                 <div className="mt-10 max-w-4xl px-6">
                     <h1 className="!text-[#ffee00] !text-[40px] !font-semibold">
                         AJR-Qora Sedana
@@ -41,7 +87,10 @@ function App() {
                     </h2>
                 </div>
 
-                <div className="bg-[#194a01] w-full mt-10 py-10 px-6">
+                <div
+                    className="w-full mt-10 py-10 px-6"
+                    style={{ backgroundImage: "url('/bg-green.jpg')" }}
+                >
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <img
                             src={image1}
@@ -68,7 +117,10 @@ function App() {
                     </div>
 
                     <div className="mt-10 flex justify-center">
-                        <button className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  ">
+                        <button
+                            onClick={scrollToBottom}
+                            className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
+                        >
                             <AccountBookFilled /> Buyurtma berish
                         </button>
                     </div>
@@ -76,11 +128,6 @@ function App() {
 
                 <div className=" w-full  py-10 px-6">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
-                        <img
-                            src={image2}
-                            alt="Image 1"
-                            className="max-w-[600px] w-[600px]"
-                        />
                         <div
                             id="texts"
                             className="flex flex-col gap-4 text-center text-white p-30"
@@ -117,16 +164,27 @@ function App() {
                                 ishlatamiz
                             </h3>
                         </div>
+                        <img
+                            src={image2}
+                            alt="Image 1"
+                            className="max-w-[600px] w-[600px]"
+                        />
                     </div>
 
                     <div className="mt-10 flex justify-center">
-                        <button className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  ">
+                        <button
+                            onClick={scrollToBottom}
+                            className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
+                        >
                             <AccountBookFilled /> Buyurtma berish
                         </button>
                     </div>
                 </div>
 
-                <div className="bg-[#194a01] w-full mt-10 py-10 px-6">
+                <div className=" w-full mt-10 py-10 px-6"
+                style={{ backgroundImage: "url('/bg-green.jpg')" }}
+                
+                >
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <img
                             src={image3}
@@ -176,7 +234,10 @@ function App() {
                     </div>
 
                     <div className="mt-10 flex justify-center">
-                        <button className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  ">
+                        <button
+                            onClick={scrollToBottom}
+                            className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
+                        >
                             <AccountBookFilled /> Buyurtma berish
                         </button>
                     </div>
@@ -184,11 +245,6 @@ function App() {
 
                 <div className=" w-full  py-5 px-6">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
-                        <img
-                            src={image4}
-                            alt="Image 1"
-                            className="max-w-[600px] w-[600px]"
-                        />
                         <div
                             id="texts"
                             className="flex flex-col gap-4 text-center text-white p-30"
@@ -227,10 +283,18 @@ function App() {
                                 alomatni yo'q qiling
                             </h3>
                         </div>
+                        <img
+                            src={image4}
+                            alt="Image 1"
+                            className="max-w-[600px] w-[600px]"
+                        />
                     </div>
 
                     <div className="mt-10 flex justify-center">
-                        <button className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  ">
+                        <button
+                            onClick={scrollToBottom}
+                            className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
+                        >
                             <AccountBookFilled /> Buyurtma berish
                         </button>
                     </div>
@@ -243,28 +307,38 @@ function App() {
                     </h1>
                     <p>Biz sizga tez orada bog'lanamiz!</p>
 
-                    <div className="flex flex-col gap-7 max-w-[560px] mx-auto ">
-                        <div className="flex flex-col items-start justify-start">
-                            <p>Ismingiz</p>
-                            <Input
-                            name="name"
-                                size="large"
-                                placeholder="Ismingizni kiriting"
-                            />
+                    <form className="pb-10" onSubmit={(e) => handleSubmit(e)}>
+                        <div className="flex flex-col gap-7 max-w-[560px] mx-auto ">
+                            <div className="flex flex-col items-start justify-start">
+                                <p>Ismingiz</p>
+                                <Input
+                                    name="name"
+                                    size="large"
+                                    placeholder="Ismingizni kiriting"
+                                />
+                            </div>
+                            <div className="flex flex-col items-start">
+                                <p>Telefon raqamingizni kiriting</p>
+                                <Input
+                                    className="w-[100px]"
+                                    width={100}
+                                    name="tel-nomer"
+                                    size="large"
+                                    type=""
+                                    value={tel}
+                                    maxLength={14}
+                                    onChange={(e) => setTel(e.target.value)}
+                                    placeholder="Ismingizni kiriting"
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                className="w-[560px] bg-[#ff7300] font-semibold text-[20px] cursor-pointer h-10 rounded-md"
+                            >
+                                Ro'yxatdan o'tish
+                            </button>
                         </div>
-                        <div className="flex flex-col items-start">
-                            <p>Telefon raqamingizni kiriting</p>
-                            <Input
-                            name="tel-nomer"
-                                size="large"
-                                type=""
-                                value={tel}
-                                maxLength={14}
-                                onChange={(e) => setTel(e.target.value)}
-                                placeholder="Ismingizni kiriting"
-                            />
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
