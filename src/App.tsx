@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 const chanelId = -1002886819915;
 
 function App() {
-    const [tel, setTel] = useState("+998 ");
+    const [tel, setTel] = useState("+998");
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
