@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
-body{
-  background-color: rgb(0, 0, 0);
-}
 
 
 h1, h2, h3, h4, h5, strong{
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
-#texts h3{
+.texts h3{
   color: #bac9b3;
   font-weight: 700;
 }
@@ -24,6 +21,6 @@ button{
 }
 
 
-#green h3{
+.green h3{
   text-align: end;
 }

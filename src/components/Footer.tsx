@@ -7,23 +7,21 @@ import {
 function Footer() {
     return (
         <div>
-            <div className=" bottom-0  w-full z-50 bg-[#3B3B3B] px-[215px] py-[40px] flex justify-between">
-                <div className="w-[327px]">
-                    <div className="w-[243px]">
-                        <div className="flex items-center gap-3 pb-[32px] ">
-                            <h1 className=" text-white text-[25px] font-semibold">
-                                Asal Sedana
-                            </h1>
-                        </div>
-                        <strong className=" font-light text-[16px] text-[#CCCCCC] ">
-                            Bizning mahsulot, sizning sog'lig'ingizni
-                            yaxshilaydi
-                        </strong>
-                        <div className="flex flex-col gap-[15px] pt-5">
-                            <strong className="font-light text-[16px] text-[#CCCCCC] ">
-                                Bizning Ijtimoiy Tarmoqlar
-                            </strong>
-                            <ul className="flex gap-[10px]">
+            <div className="bottom-0 w-full z-50 bg-[#3B3B3B] px-6 md:px-[50px] lg:px-[100px] xl:px-[215px] py-10 flex flex-col lg:flex-row gap-10 justify-between">
+  <div className="w-full lg:w-[327px]">
+    <div className="w-full lg:w-[243px]">
+      <div className="flex items-center gap-3 pb-8">
+        <h1 className="text-white text-[20px] md:text-[25px] font-semibold">Asal Sedana</h1>
+      </div>
+      <strong className="font-light text-[14px] md:text-[16px] text-[#CCCCCC]">
+        Bizning mahsulot, sizning sog'lig'ingizni yaxshilaydi
+      </strong>
+      <div className="flex flex-col gap-4 pt-5">
+        <strong className="font-light text-[14px] md:text-[16px] text-[#CCCCCC]">
+          Bizning Ijtimoiy Tarmoqlar
+        </strong>
+        <ul className="flex gap-3">
+          <ul className="flex gap-[10px]">
                                 <li className="text-[#858584] cursor-pointer ">
                                     <a
                                         className="block transition-transform duration-300 hover:translate-y-1"
@@ -66,56 +64,25 @@ function Footer() {
                                     /></a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                {/* <div className="w-[240px]">
-                    <div>
-                        <div className="flex items-center gap-3 pb-[32px] ">
-                            <h1 className=" text-white text-[25px] font-semibold">
-                                
-                            </h1>
-                        </div>
-                        <strong className=" font-light text-[16px] text-[#CCCCCC] ">
-                            Marketplace
-                        </strong>
-                        <div className="flex flex-col gap-[15px] pt-5">
-                            <strong className="font-light text-[16px] text-[#CCCCCC] ">
-                                Rankings
-                            </strong>
-                            <strong className="font-light text-[16px] text-[#CCCCCC] ">
-                                Connect a wallet
-                            </strong>
-                        </div>
-                    </div>
-                </div> */}
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                <div className="w-[420px]">
-                    <div className="flex flex-col gap-[20px]">
-                        <div className="w-[295px] flex flex-col gap-[25px]">
-                            <h1 className=" text-white text-[25px] font-semibold">
-                                Murojaat uchun
-                            </h1>
-                            <strong className=" font-light text-[16px] !text-[#85afff] ">
-                                <a
-                                    className="block transition-transform duration-300 hover:translate-y-1"
-                                    href=""
-                                >
-                                    Telegram orqali yozish
-                                </a>
-                            </strong>
-                        </div>
-                        <button
-  className="bg-[#A259FF] text-white font-semibold px-[50px] py-[19px] rounded-[20px]
-             hover:shadow-[0_4px_20px_rgba(162,89,255,0.6)] transition-shadow duration-300"
->
-  <PhoneFilled /> Qong'iroq qilish
-</button>
-
-
-                    </div>
-                </div>
-            </div>
+  <div className="w-full lg:w-[420px]">
+    <div className="flex flex-col gap-5">
+      <div className="w-full lg:w-[295px] flex flex-col gap-6">
+        <h1 className="text-white text-[20px] md:text-[25px] font-semibold">Murojaat uchun</h1>
+        <strong className="font-light text-[14px] md:text-[16px] text-[#85afff]">
+          <a className="block transition-transform duration-300 hover:translate-y-1" href="#">Telegram orqali yozish</a>
+        </strong>
+      </div>
+      <button className="bg-[#A259FF] text-white font-semibold px-6 md:px-10 py-4 rounded-[20px] hover:shadow-[0_4px_20px_rgba(162,89,255,0.6)] transition-shadow duration-300">
+        <PhoneFilled /> Qong'iroq qilish
+      </button>
+    </div>
+  </div>
+</div>
         </div>
     );
 }
