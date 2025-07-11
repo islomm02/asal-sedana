@@ -66,7 +66,7 @@ function OrderPage() {
     };
     const [name, setName] = useState("");
 
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading] = useState(false);
 
     return (
         <div className="bg-gradient-to-b from-[#00cc96] to-[#152529] w-full h-[100vh]">
