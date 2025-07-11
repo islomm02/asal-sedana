@@ -2,8 +2,6 @@ import {
     FacebookOutlined,
     InstagramOutlined,
     PhoneFilled,
-    TwitterOutlined,
-    YoutubeOutlined,
 } from "@ant-design/icons";
 
 function Footer() {

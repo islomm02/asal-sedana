@@ -18,6 +18,7 @@ function App() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    // @ts-ignore
     const [isLoading, setIsLoading] = useState(false);
 
     const [name, setName] = useState("");
