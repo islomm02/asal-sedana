@@ -1,3 +1,4 @@
+"use client";
 import sardorImg from "./assets/images/sardor.png";
 import image1 from "./assets/images/image1.png";
 import image2 from "./assets/images/image2.png";
@@ -8,11 +9,18 @@ import { Input } from "antd";
 import { useRef, useState } from "react";
 import axios from "axios";
 import CustomModal from "./components/CustomModal";
+import Footer from "./components/Footer";
 
 const chanelId = -1002886819915;
 
 function App() {
     const [tel, setTel] = useState("+998 ");
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [name, setName] = useState("");
 
     const scrollToBottom = () => {
         window.scrollTo({
@@ -27,8 +35,22 @@ function App() {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
-        const name = formData.get("name");
-        const phone = formData.get("tel-nomer");
+        const name = formData.get("name")?.toString().trim() || "";
+        const phone = formData.get("tel-nomer")?.toString().trim() || "";
+        console.log(name, phone);
+
+        if (name.length < 4) {
+            alert("Ism kamida 4 ta harfdan iborat bo‘lishi kerak!");
+            return;
+        }
+
+        const phoneRegex = /^\+998\d{9}$/;
+        if (!phoneRegex.test(phone)) {
+            alert(
+                "Telefon raqam +998 bilan boshlanib 9 ta raqamdan iborat bo‘lishi kerak!"
+            );
+            return;
+        }
 
         const message = `<b>Ismi:</b> ${name}\n<b>Nomer:</b> ${phone}`;
 
@@ -41,9 +63,11 @@ function App() {
                     parse_mode: "HTML",
                 }
             );
-            <CustomModal isOpen={true} />;
+
             if (formRef.current) formRef.current.reset();
             setTel("+998 ");
+
+            setIsModalOpen(true);
         } catch (error) {
             console.error("Xatolik:", error);
             alert("Xatolik yuz berdi ❌");
@@ -181,9 +205,9 @@ function App() {
                     </div>
                 </div>
 
-                <div className=" w-full mt-10 py-10 px-6"
-                style={{ backgroundImage: "url('/bg-green.jpg')" }}
-                
+                <div
+                    className=" w-full mt-10 py-10 px-6"
+                    style={{ backgroundImage: "url('/bg-green.jpg')" }}
                 >
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <img
@@ -300,47 +324,54 @@ function App() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-3 justify-center">
+                <div className="flex flex-col gap-3 justify-center pb-7">
                     <h1 className="mt-[100px] text-[40px] font-bold px-[400px]">
                         BATAFSIL MA'LUMOT UCHUN ISMINGIZ VA RAQAMINGIZNI
                         QOLDIRING!
                     </h1>
                     <p>Biz sizga tez orada bog'lanamiz!</p>
 
-                    <form className="pb-10" onSubmit={(e) => handleSubmit(e)}>
-                        <div className="flex flex-col gap-7 max-w-[560px] mx-auto ">
-                            <div className="flex flex-col items-start justify-start">
-                                <p>Ismingiz</p>
-                                <Input
-                                    name="name"
-                                    size="large"
-                                    placeholder="Ismingizni kiriting"
-                                />
-                            </div>
+                    <form onSubmit={handleSubmit}>
+                        <div className="w-[560px] mx-auto flex flex-col gap-4">
                             <div className="flex flex-col items-start">
-                                <p>Telefon raqamingizni kiriting</p>
+                            <p>Ismingiz:</p>
                                 <Input
-                                    className="w-[100px]"
-                                    width={100}
-                                    name="tel-nomer"
-                                    size="large"
-                                    type=""
-                                    value={tel}
-                                    maxLength={14}
-                                    onChange={(e) => setTel(e.target.value)}
-                                    placeholder="Ismingizni kiriting"
-                                />
+                            placeholder="Ismingizni kiriting"
+                            size="large"
+                            name="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
                             </div>
-                            <button
-                                type="submit"
-                                className="w-[560px] bg-[#ff7300] font-semibold text-[20px] cursor-pointer h-10 rounded-md"
-                            >
-                                Ro'yxatdan o'tish
-                            </button>
+                        <div className="flex flex-col items-start">
+                            <p>Telefon Raqamingiz:</p>
+                            <Input
+                        size="large"
+                            name="tel-nomer"
+                            value={tel}
+                            onChange={(e) => setTel(e.target.value)}
+                        />
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="bg-[#ff7300] text-white rounded-md h-10 w-[560px]"
+                            disabled={isLoading}
+                        >
+                            {isLoading
+                                ? "Yuborilmoqda..."
+                                : "Ro'yxatdan o'tish"}
+                        </button>
                         </div>
                     </form>
+
+                    <CustomModal
+                        open={isModalOpen}
+                        onClose={() => setIsModalOpen(false)}
+                    />
                 </div>
             </div>
+                <Footer/>
         </div>
     );
 }

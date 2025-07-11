@@ -1,38 +1,23 @@
-import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import { Modal } from "antd";
 
-const CustomModal: React.FC<{isOpen: boolean}> = ({isOpen}) => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-    setIsModalOpen(isOpen)
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
+interface CustomModalProps {
+  open: boolean;
+  onClose: () => void;
+}
 
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-
+const CustomModal: React.FC<CustomModalProps> = ({ open, onClose }) => {
   return (
-    <>
-      <Button type="primary" onClick={showModal}>
-        Open Modal
-      </Button>
-      <Modal
-        title="Basic Modal"
-        closable={{ 'aria-label': 'Custom Close Button' }}
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Modal>
-    </>
+    <Modal
+      title="Asal Sedana"
+      open={open}
+      onOk={onClose}
+      onCancel={onClose}
+    >
+      <p>
+        Ro'yxatdan o'tganingiz uchun raxmat. Biz o'zimiz sizga tez orada
+        aloqaga chiqamiz ✅
+      </p>
+    </Modal>
   );
 };
 
