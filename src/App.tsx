@@ -15,6 +15,7 @@ const chanelId = -1002886819915;
 
 function App() {
     const [tel, setTel] = useState("+998");
+    const [modalMessage, setModalMessage] = useState("");
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -40,12 +41,21 @@ function App() {
         const phone = formData.get("tel-nomer")?.toString().trim() || "";
         console.log(name, phone);
 
-        if (name.length < 4) {
-            alert("Ism kamida 4 ta harfdan iborat bo‘lishi kerak!");
-            return;
-        }
+            if (name.length < 4) {
+                setModalMessage(
+                    "Ism kamida 4 ta harfdan iborat bo‘lishi kerak!"
+                );
+                setIsModalOpen(true);
+                return;
+            }
 
-        const phoneRegex = /^\+998\d{9}$/;
+        <CustomModal
+            message={modalMessage}
+            open={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+        />;
+
+        const phoneRegex = /^\+998 \d{9}$/;
         if (!phoneRegex.test(phone)) {
             alert(
                 "Telefon raqam +998 bilan boshlanib 9 ta raqamdan iborat bo‘lishi kerak!"
@@ -113,10 +123,11 @@ function App() {
                 </div>
 
                 <div
-                    className="w-full mt-10 py-10 px-6"
+                id="green"
+                    className="w-full  mt-10 py-10 px-6"
                     style={{ backgroundImage: "url('/bg-green.jpg')" }}
                 >
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
+                    <div className="flex flex-col  md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <img
                             src={image1}
                             alt="Image 1"
@@ -151,7 +162,7 @@ function App() {
                     </div>
                 </div>
 
-                <div className=" w-full  py-10 px-6">
+                <div id="white-bg" className=" w-full  py-10 px-6">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <div
                             id="texts"
@@ -207,7 +218,8 @@ function App() {
                 </div>
 
                 <div
-                    className=" w-full mt-10 py-10 px-6"
+                id="green"
+                    className=" w-full mt-10 py-10 px-6 "
                     style={{ backgroundImage: "url('/bg-green.jpg')" }}
                 >
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
@@ -268,7 +280,7 @@ function App() {
                     </div>
                 </div>
 
-                <div className=" w-full  py-5 px-6">
+                <div id="white-bg" className=" w-full  py-5 px-6">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <div
                             id="texts"
@@ -335,44 +347,46 @@ function App() {
                     <form onSubmit={handleSubmit}>
                         <div className="w-[560px] mx-auto flex flex-col gap-4">
                             <div className="flex flex-col items-start">
-                            <p>Ismingiz:</p>
+                                <p>Ismingiz:</p>
                                 <Input
-                            placeholder="Ismingizni kiriting"
-                            size="large"
-                            name="name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
+                                    placeholder="Ismingizni kiriting"
+                                    size="large"
+                                    name="name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
                             </div>
-                        <div className="flex flex-col items-start">
-                            <p>Telefon Raqamingiz:</p>
-                            <Input
-                        size="large"
-                            name="tel-nomer"
-                            value={tel}
-                            onChange={(e) => setTel(e.target.value)}
-                        />
-                        </div>
+                            <div className="flex flex-col items-start">
+                                <p>Telefon Raqamingiz:</p>
+                                <Input
+                                    size="large"
+                                    name="tel-nomer"
+                                    value={tel}
+                                    onChange={(e) => setTel(e.target.value)}
+                                />
+                            </div>
 
-                        <button
-                            type="submit"
-                            className="bg-[#ff7300] text-white rounded-md h-10 w-[560px]"
-                            disabled={isLoading}
-                        >
-                            {isLoading
-                                ? "Yuborilmoqda..."
-                                : "Ro'yxatdan o'tish"}
-                        </button>
+                            <button
+                                type="submit"
+                                className="bg-[#ff7300] text-white rounded-md h-10 w-[560px]"
+                                disabled={isLoading}
+                            >
+                                {isLoading
+                                    ? "Yuborilmoqda..."
+                                    : "Ro'yxatdan o'tish"}
+                            </button>
                         </div>
                     </form>
 
                     <CustomModal
+                        message="Ro'yxatdan o'tganingiz uchun raxmat. Biz o'zimiz sizga tez orada
+        aloqaga chiqamiz ✅"
                         open={isModalOpen}
                         onClose={() => setIsModalOpen(false)}
                     />
                 </div>
             </div>
-                <Footer/>
+            <Footer />
         </div>
     );
 }

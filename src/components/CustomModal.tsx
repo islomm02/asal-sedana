@@ -3,9 +3,10 @@ import { Modal } from "antd";
 interface CustomModalProps {
   open: boolean;
   onClose: () => void;
+  message: string
 }
 
-const CustomModal: React.FC<CustomModalProps> = ({ open, onClose }) => {
+const   CustomModal: React.FC<CustomModalProps> = ({ open, onClose , message}) => {
   return (
     <Modal
       title="Asal Sedana"
@@ -14,8 +15,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ open, onClose }) => {
       onCancel={onClose}
     >
       <p>
-        Ro'yxatdan o'tganingiz uchun raxmat. Biz o'zimiz sizga tez orada
-        aloqaga chiqamiz ✅
+        {message}
       </p>
     </Modal>
   );
