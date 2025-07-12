@@ -10,11 +10,12 @@ function Footer() {
             <div className="bottom-0 w-full z-50 bg-[#3B3B3B] px-6 md:px-[50px] lg:px-[100px] xl:px-[215px] py-10 flex flex-col lg:flex-row gap-10 justify-between">
   <div className="w-full lg:w-[327px]">
     <div className="w-full lg:w-[243px]">
-      <div className="flex items-center gap-3 pb-8">
-        <h1 className="text-white text-[20px] md:text-[25px] font-semibold">Asal Sedana</h1>
+      <div className="flex items-center gap-3 pb-8 justify-between ">
+        <h1 className="text-white text-[20px] md:text-[25px]  font-semibold">Asal Sedana</h1>
+        <img src="/sedana-logo.png" alt="" width={80} height={80} />
       </div>
       <strong className="font-light text-[14px] md:text-[16px] text-[#CCCCCC]">
-        Bizning mahsulot, sizning sog'lig'ingizni yaxshilaydi
+        TABIIY SALOMATLIK 🌱 | SOG’LIG’INGIZ UCHUN QAYG’URAMIZ 💚
       </strong>
       <div className="flex flex-col gap-4 pt-5">
         <strong className="font-light text-[14px] md:text-[16px] text-[#CCCCCC]">
@@ -25,7 +26,7 @@ function Footer() {
                                 <li className="text-[#858584] cursor-pointer ">
                                     <a
                                         className="block transition-transform duration-300 hover:translate-y-1"
-                                        href="https://kun.uz"
+                                        href="https://t.me/asalsedana"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -44,7 +45,7 @@ function Footer() {
                                 <li className="text-[#858584] cursor-pointer">
                                     <a
                                         className="block transition-transform duration-300 hover:translate-y-1"
-                                        href="https://kun.uz"
+                                        href="https://www.instagram.com/asal_sedana?igsh=Z2dydGM1bWlwZHI2"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -57,9 +58,8 @@ function Footer() {
                                 <li className="text-[#858584] cursor-pointer ">
                                     <a
                                     className="block transition-transform duration-300 hover:translate-y-1"
-                                    href="https://kun.uz">
+                                    href="https://www.instagram.com/asal_sedana?igsh=Z2dydGM1bWlwZHI2">
                                     <InstagramOutlined
-                                        href="kun.uz"
                                         style={{ fontSize: "32px" }}
                                     /></a>
                                 </li>
@@ -77,9 +77,11 @@ function Footer() {
           <a className="block transition-transform duration-300 hover:translate-y-1" href="#">Telegram orqali yozish</a>
         </strong>
       </div>
-      <button className="bg-[#A259FF] text-white font-semibold px-6 md:px-10 py-4 rounded-[20px] hover:shadow-[0_4px_20px_rgba(162,89,255,0.6)] transition-shadow duration-300">
-        <PhoneFilled /> Qong'iroq qilish
-      </button>
+      <a href="tel:+998339003033">
+  <button className="bg-[#A259FF] text-white font-semibold px-6 md:px-10 py-4 rounded-[20px] hover:shadow-[0_4px_20px_rgba(162,89,255,0.6)] transition-shadow duration-300">
+    <PhoneFilled /> Qong'iroq qilish
+  </button>
+</a>
     </div>
   </div>
 </div>

@@ -9,25 +9,18 @@ import { useState } from "react";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
-
 function HomePage() {
-
-    const navigate = useNavigate()
-
+    const navigate = useNavigate();
 
     // @ts-ignore
     const [isLoading, setIsLoading] = useState(false);
 
-
     const scrollToBottom = () => {
-        navigate("/order")
+        navigate("/order");
     };
 
-
-    
-
     return (
-        <div className="relative w-full min-h-screen overflow-hidden">
+        <div className=" relative w-full min-h-screen overflow-hidden">
             <div
                 className="absolute inset-0 bg-cover bg-center opacity-80 -z-10"
                 style={{ backgroundImage: "url('/bg-white.jpg')" }}
@@ -67,20 +60,19 @@ function HomePage() {
                     className="green w-full  mt-10 py-10 px-6"
                     style={{ backgroundImage: "url('/bg-green.jpg')" }}
                 >
-                    <div className="flex flex-col sm:flex-row  md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
+                    <div className="flex flex-col  sm:flex-row  md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <img
                             src={image1}
                             alt="Image 1"
-                            className="max-w-[500px] w-full"
+                            className="max-w-[500px]  w-full"
                         />
-                        <div
-  className="texts text-center w-[550px] md:text-end text-white flex flex-col gap-4 p-6 md:p-10"
->
-
+                        <div className=" w-[95%]   text-center sm:w-[550px] md:text-end text-white flex flex-col gap-4 p-6 md:p-10">
                             <h2 className="!text-[24px] !text-[#52DA0E] font-bold">
                                 "AJR" - NOMI BILAN AJR
                             </h2>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">Ajr Qora Sedana bilan xayriya qiling!</h3>
+                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                                Ajr Qora Sedana bilan xayriya qiling!
+                            </h3>
                             <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
                                 Mahsulotdan tushgan daromadning 30% qismi yetim
                                 bolalarga xayriya qilinadi.
@@ -95,7 +87,7 @@ function HomePage() {
                     <div className="mt-10 flex justify-center">
                         <button
                             onClick={scrollToBottom}
-                            className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
+                            className="animate-bounce text-[18px] sm:text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black w-[200px] h-[40px]  sm:w-[265px] sm:h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
                         >
                             <AccountBookFilled /> Buyurtma berish
                         </button>
@@ -106,7 +98,7 @@ function HomePage() {
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <div
                             id="texts"
-                            className="flex flex-col gap-4 text-center text-white p-30"
+                            className="flex w-[90%] flex-col gap-4 text-center text-white p-30"
                         >
                             <h2 className="!text-[24px] !text-[#52DA0E] font-bold">
                                 Imunitetni kuchaytirishda yordam beradi!
@@ -143,14 +135,14 @@ function HomePage() {
                         <img
                             src={image2}
                             alt="Image 1"
-                            className="max-w-[600px] w-[600px]"
+                            className="  w-[600px]"
                         />
                     </div>
 
                     <div className="mt-10 flex justify-center">
                         <button
                             onClick={scrollToBottom}
-                            className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
+                            className="animate-bounce text-[18px] sm:text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black w-[200px] h-[40px]  sm:w-[265px] sm:h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
                         >
                             <AccountBookFilled /> Buyurtma berish
                         </button>
@@ -158,7 +150,7 @@ function HomePage() {
                 </div>
 
                 <div
-                id="green"
+                    id="green"
                     className=" w-full mt-10 py-10 px-6 "
                     style={{ backgroundImage: "url('/bg-green.jpg')" }}
                 >
@@ -166,7 +158,7 @@ function HomePage() {
                         <img
                             src={image3}
                             alt="Image 1"
-                            className="max-w-[600px] w-[600px]"
+                            className=" w-[600px]"
                         />
                         <div
                             id="texts"
@@ -213,14 +205,14 @@ function HomePage() {
                     <div className="mt-10 flex justify-center">
                         <button
                             onClick={scrollToBottom}
-                            className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
+                            className="animate-bounce text-[18px] sm:text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black w-[200px] h-[40px]  sm:w-[265px] sm:h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
                         >
                             <AccountBookFilled /> Buyurtma berish
                         </button>
                     </div>
                 </div>
 
-                <div id="white-bg" className=" w-full  py-5 px-6">
+                <div  className="white-bg w-full  py-5 px-6">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <div
                             id="texts"
@@ -263,30 +255,26 @@ function HomePage() {
                         <img
                             src={image4}
                             alt="Image 1"
-                            className="max-w-[600px] w-[600px]"
+                            className="w-[600px]"
                         />
                     </div>
-
-                    
                 </div>
 
                 <div className="flex flex-col gap-3 justify-center ">
-                    <h1 className="mt-[10px] text-[40px] font-bold px-[400px]">
+                    <h1 className="text-[20px] mt-[10px] sm:text-[40px] font-bold px-[50px] sm:px-[400px]">
                         BATAFSIL MA'LUMOT UCHUN ISMINGIZ VA RAQAMINGIZNI
                         QOLDIRING!
                     </h1>
                     <p>Biz sizga tez orada bog'lanamiz!</p>
-
-                    
                 </div>
                 <div className="mt-10 mb-[50px] flex justify-center">
-                        <button
-                            onClick={scrollToBottom}
-                            className="animate-bounce text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black  w-[265px] h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
-                        >
-                            <AccountBookFilled /> Buyurtma berish
-                        </button>
-                    </div>
+                    <button
+                        onClick={scrollToBottom}
+                            className="animate-bounce text-[18px] sm:text-[22px] text-white rounded-xl hover:scale-110 hover:bg-[#ffca7f] duration-500 hover:shadow-black w-[200px] h-[40px]  sm:w-[265px] sm:h-[60px] bg-gradient-to-r from-yellow-400 to-orange-500  "
+                    >
+                        <AccountBookFilled /> Buyurtma berish
+                    </button>
+                </div>
             </div>
             <Footer />
         </div>

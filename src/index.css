@@ -2,7 +2,7 @@
 
 
 
-h1, h2, h3, h4, h5, strong{
+/* h1, h2, h3, h4, h5, strong{
   color: rgb(255, 255, 255);
 }
 
@@ -23,4 +23,85 @@ button{
 
 .green h3{
   text-align: end;
+} */
+ 
+
+/* Asosiy umumiy stil */
+
+
+
+#green,
+#white-bg {
+  width: 100%;
+  padding: 40px 24px;
+  background-size: cover;
+  background-position: center;
+}
+
+#texts {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+#texts h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #52da0e;
+}
+
+#texts h3 {
+  font-weight: bold;
+  color: #000000;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: end;
+  }
+
+  #texts {
+    text-align: end;
+  }
+
+  .responsive-image {
+    max-width: 500px;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+  #texts h2 {
+    font-size: 28px;
+  }
+
+  #texts h3 {
+    font-size: 20px;
+  }
+}
+
+
+
+.white-bg h3{
+  color: rgb(255, 0, 0);
 }
