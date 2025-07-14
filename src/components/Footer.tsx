@@ -72,10 +72,7 @@ function Footer() {
   <div className="w-full lg:w-[420px]">
     <div className="flex flex-col gap-5">
       <div className="w-full lg:w-[295px] flex flex-col gap-6">
-        <h1 className="text-white text-[20px] md:text-[25px] font-semibold">Murojaat uchun</h1>
-        <strong className="font-light text-[14px] md:text-[16px] text-[#85afff]">
-          <a className="block transition-transform duration-300 hover:translate-y-1" href="#">Telegram orqali yozish</a>
-        </strong>
+        <h1 className="text-white text-[20px] md:text-[25px] font-semibold">Murojaat uchun</h1> 
       </div>
       <a href="tel:+998339003033">
   <button className="bg-[#A259FF] text-white font-semibold px-6 md:px-10 py-4 rounded-[20px] hover:shadow-[0_4px_20px_rgba(162,89,255,0.6)] transition-shadow duration-300">
