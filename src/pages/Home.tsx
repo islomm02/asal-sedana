@@ -37,7 +37,7 @@ function HomePage() {
                         Asal Sedana – qadimiy shifo manbai
                     </h1>
                     <strong className="text-white block mt-2 text-lg">
-                        Bu yerda siz organizmga foydali bo‘lgan asal, qora sedana yog‘i, 
+                        Bu yerda siz organizmga foydali bo‘lgan asal, qora sedana yog‘i, зжъхэж
                     </strong>
                     <h2 className="text-black text-[20px] font-semibold">
                         burunga tomchilar va boshqa tabiiy davo vositalarini topasiz.
