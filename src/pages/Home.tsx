@@ -24,13 +24,15 @@ function HomePage() {
             style={{ backgroundImage: "url('/bg-white.jpg')" }}
         >
             <div
-                className="absolute top-0 left-0 w-full !h-[800px] opacity-80 sm:h-[800px] bg-cover bg-center -z-20"
-                style={{ backgroundImage: "url('/sardor-bg.jpg')" }}
-            />
+  className="absolute top-0 left-0  w-full sm:h-[600px] xl:h-[700px] 2xl:h-[800px] h-screen bg-cover bg-center bg-no-repeat opacity-80 -z-20"
+  style={{ backgroundImage: "url('/sardor-bg.jpg')" }}
+/>
+
+
 
             <div
              className=" flex flex-col  items-center justify-center  text-center text-white">
-                <div id="header" className="bg-[rgba(0,0,0,0.5)] pt-20 h-full pb-5 sm:h-90 max-w-4xl px-6">
+                <div id="header" className="bg-[rgba(0,0,0,0.5)]  pt-20 h-full pb-5 sm:h-90 max-w-4xl px-6">
                     <h1 className="!text-[#ffee00] !text-[40px] !font-semibold">
                         Asal Sedana – qadimiy shifo manbai
                     </h1>
@@ -43,11 +45,6 @@ function HomePage() {
                     <h2 className="text-black text-[20px] font-semibold mt-2">
                         Sog‘lom hayot uchun tanlang – ishonchli va halol manbadan!
                     </h2>
-                    {/* <h2 className="text-black text-[20px] font-semibold mt-2">
-                        Juda ko’pchililning koriga yaragan, dardiga darmon
-                        bo’lgan, jismiga oro kirgan va mazlum ko’ngillarga
-                        malham bo’lishga ulgurgan o’sha o’zimizning “AJR-SEDANA”
-                    </h2> */}
                 </div>
 
                 <div
@@ -60,22 +57,26 @@ function HomePage() {
                             alt="Image 1"
                             className="max-w-[500px]  w-full"
                         />
-                        <div className=" w-[95%]   text-center sm:w-[550px] md:text-end text-white flex flex-col gap-4 p-6 md:p-10">
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                        <div className=" w-[95%]   text-center sm:w-[550px] sm:text-start text-white flex flex-col gap-4 p-6 md:p-10">
+                           
+                            <h3 className="!text-[#a7a5a5b1] text-[20px]  font-bold !text-start md:text-end sm:w-full">
+                            Qora sedana
+                            </h3>
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Qon bosimi , qandli diabet , prostata va
                                 buyrak muammolarida yordam beradi
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                 Qon bosimini tartibga soladi
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Oshqozon va ichak faoliyatini yaxshilaydi,
                                 jigardagi yog'larni eritadi
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                 Yurak kasalliklarini xavfini kamaytiradi
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                 Xolesterinni pasaytiradi , tromblarning oldini
                                 oladi
                             </h3>
@@ -96,12 +97,15 @@ function HomePage() {
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1200px] mx-auto">
                         <div
                             id="texts"
-                            className="flex w-[90%] flex-col gap-4 text-center text-white p-30"
+                            className="flex w-[90%] flex-col gap-4 !text-start text-white p-30"
                         >
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#51ff00] font-bold !text-start md:text-end sm:w-full">
+                            Qust al-Hindiy
+                            </h3>
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Tanani tozalovchi va tiklovchi tabiiy kuch
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Yallig'lanishlarga garshi kuchli vosita!{" "}
                                 <br />  Bronxit, yo'tal va shamollashda
                                 ishonchli yordamchi!
@@ -111,7 +115,7 @@ function HomePage() {
                                 <br /> Qorinning shishini, og'riqni
                                 kamaytiradi!
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Qorinning shishini, og'riqni kamaytiradi!
                             </h3>
                         </div>
@@ -145,27 +149,27 @@ function HomePage() {
                         />
                         <div
                             id="texts"
-                            className="flex flex-col gap-4 text-center text-white p-30"
+                    className="flex flex-col gap-4 !text-start text-white p-30"
                         >
                             <h2 className="!text-[24px] !text-[#52DA0E] font-bold">
                                  Tabiiy asal — sog'liq garovi!
                             </h2>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                    <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Immunitetni mustahkamlaydi, kuch-quvvat
                                 beradi
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                    <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Asal - shamollash, yo'tal va sovuqda eng
                                 yaxshi yordamchi
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                    <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Yurak va qon tomirlar faoliyatini yaxshilaydi
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                    <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Asal - bolalar, keksa va homilador ayollar
                                 uchun ham foydali
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                    <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Hech qanday qo'shimcha va shakar yo'q ﻿faqat
                                 sof tabiat!
                             </h3>
@@ -188,27 +192,27 @@ function HomePage() {
                             id="texts"
                             className="flex flex-col gap-4 text-center text-white p-30"
                         >
-                            <h2 className="!text-[24px] !text-[#52DA0E] font-bold">
+                            <h2 className="!text-[24px] !text-[#6e4747] font-bold">
                                  Qist va sedana yog'li burun tomchisi - nafas
                                 oling erkin!
                             </h2>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Burun bitishi, allergiya va shamollashda
                                 tabiiy yechim!
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                 Virus va bakteriyalarga qarshi kuchli himoya -
                                 tabiiy yog'lardan!
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                  Burunni ochadi, shish va yallig'lanishni
                                 kamaytiradi
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                 Kimyoviy modda yo'q - faqat sof qist va sedana
                                 yog'i
                             </h3>
-                            <h3 className="text-[#bac9b3] font-bold text-center md:text-end sm:w-full">
+                            <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
                                 Bolalar va kattalar uchun mos, xavfsiz va
                                 tabiiy
                             </h3>
