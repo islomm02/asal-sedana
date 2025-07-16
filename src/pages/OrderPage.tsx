@@ -72,7 +72,7 @@ function OrderPage() {
     const [isLoading] = useState(false);
 
     return (
-        <div className="bg-gradient-to-b from-[#00cc96] to-[#152529] w-full h-[100vh]">
+        <div style={{backgroundImage: "url('/bg-white.jpg')"}} className="bg-gradient-to-b from-[#00cc96] to-[#152529] w-full h-[100vh]">
             <div>
                 <button
                     style={{
