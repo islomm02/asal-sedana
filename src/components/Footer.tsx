@@ -72,10 +72,10 @@ function Footer() {
   <div className="w-full lg:w-[420px]">
     <div className="flex flex-col gap-5">
       <div className="w-full lg:w-[295px] flex flex-col gap-6">
-        <h1 className="text-white text-[20px] md:text-[25px] font-semibold">Murojaat uchun</h1> 
+        <h1 className="text-white text-[20px] mx-auto sm:mx-0 md:text-[25px] font-semibold">Murojaat uchun</h1> 
       </div>
-      <a href="tel:+998339003033">
-  <button className="bg-[#A259FF] text-white font-semibold px-6 md:px-10 py-4 rounded-[20px] hover:shadow-[0_4px_20px_rgba(162,89,255,0.6)] transition-shadow duration-300">
+      <a className="mx-auto" href="tel:+998339003033">
+  <button className="bg-[#A259FF]  text-white font-semibold px-6 md:px-10 py-4 rounded-[20px] hover:shadow-[0_4px_20px_rgba(162,89,255,0.6)] transition-shadow duration-300">
     <PhoneFilled /> Qong'iroq qilish
   </button>
 </a>

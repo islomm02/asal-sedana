@@ -55,8 +55,10 @@ button{
 
 #texts h3 {
   font-weight: bold;
-  color: #ffffff;
+  color: #503e23;
 }
+
+
 
 .responsive-image {
   max-width: 100%;
@@ -111,6 +113,10 @@ button{
 
 .white-bg h3{
   color: rgb(255, 0, 0);
+}
+
+#white-bg{
+  color: #624e2c;
 }
 
 

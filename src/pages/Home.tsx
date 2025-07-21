@@ -39,7 +39,7 @@ function HomePage() {
                     </h1>
                     <strong className="text-white block mt-2 text-lg">
                         Bu yerda siz organizmga foydali bo‘lgan asal, qora
-                        sedana yog‘i, зжъхэж
+                        sedana yog‘i,
                     </strong>
                     <h2 className="text-black text-[20px] font-semibold">
                         burunga tomchilar va boshqa tabiiy davo vositalarini
@@ -102,7 +102,7 @@ function HomePage() {
                             id="texts"
                             className="flex w-[90%] flex-col gap-4 !text-start text-white p-30"
                         >
-                            <h3 className="text-[#51ff00] font-bold !text-start md:text-end sm:w-full">
+                            <h3 className="text-[#000000] font-bold !text-start md:text-end sm:w-full">
                                 Qust al-Hindiy
                             </h3>
                             <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
@@ -150,8 +150,8 @@ function HomePage() {
                             className=" w-[600px]"
                         />
                         <div
-                            id="texts"
-                            className="flex flex-col gap-4 !text-start text-white p-30"
+                            // id="texts"
+                            className="flex text-center flex-col gap-4  text-white font-bold p-[20px]"
                         >
                             <h2 className="!text-[24px] !text-[#52DA0E] font-bold">
                                 Tabiiy asal — sog'liq garovi!
@@ -233,8 +233,8 @@ function HomePage() {
                             className=" w-[600px]"
                         />
                         <div
-                            id="texts"
-                            className="flex flex-col gap-4 !text-start text-white p-30"
+                            // id="texts"
+                            className="flex text-center flex-col gap-4  text-white font-bold p-[20px]"
                         >
                             <h2 className="!text-[24px] !text-[#52DA0E] font-bold">
                                  Omega-3 - yurak, miya va ko'z salomatligi
