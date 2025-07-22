@@ -62,7 +62,7 @@ function HomePage() {
                             className="max-w-[500px]  w-full"
                         />
                         <div className=" w-[95%]   text-center sm:w-[550px] sm:text-start text-white flex flex-col gap-4 p-6 md:p-10">
-                            <h3 className="!text-[#a7a5a5b1] text-[20px]  font-bold !text-start md:text-end sm:w-full">
+                            <h3 className="text-white text-[30px]  font-bold !text-start md:text-end sm:w-full">
                                 Qora sedana
                             </h3>
                             <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
@@ -102,7 +102,7 @@ function HomePage() {
                             id="texts"
                             className="flex w-[90%] flex-col gap-4 !text-start text-white p-30"
                         >
-                            <h3 className="text-[#000000] font-bold !text-start md:text-end sm:w-full">
+                            <h3 className="text-[#000000] !text-[30px] font-bold !text-start md:text-end sm:w-full">
                                 Qust al-Hindiy
                             </h3>
                             <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
@@ -153,7 +153,7 @@ function HomePage() {
                             // id="texts"
                             className="flex text-center flex-col gap-4  text-white font-bold p-[20px]"
                         >
-                            <h2 className="!text-[24px] !text-[#52DA0E] font-bold">
+                            <h2 className="!text-[24px] !text-[#fff] font-bold">
                                 Tabiiy asal — sog'liq garovi!
                             </h2>
                             <h3 className="text-[#bac9b3] font-bold !text-start md:text-end sm:w-full">
@@ -261,11 +261,11 @@ function HomePage() {
                 </div>
 
                 <div className="flex flex-col gap-3 justify-center ">
-                    <h1 className="text-[20px] mt-[10px] sm:text-[40px] font-bold px-[50px] sm:px-[400px]">
+                    <h1 className="text-[20px] text-[#503e23] mt-[10px] sm:text-[40px] font-bold px-[50px] sm:px-[400px]">
                         BATAFSIL MA'LUMOT UCHUN ISMINGIZ VA RAQAMINGIZNI
                         QOLDIRING!
                     </h1>
-                    <p>Biz sizga tez orada bog'lanamiz!</p>
+                    <p className="text-[#503e23]">Biz sizga tez orada bog'lanamiz!</p>
                 </div>
                 <div className="mt-10 mb-[50px] flex justify-center">
                     <button
