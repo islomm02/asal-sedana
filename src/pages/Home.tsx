@@ -236,7 +236,7 @@ function HomePage() {
                             // id="texts"
                             className="flex text-center flex-col gap-4  text-white font-bold p-[20px]"
                         >
-                            <h2 className="!text-[24px] !text-[#52DA0E] font-bold">
+                            <h2 className="!text-[24px] !text-[#fff] font-bold">
                                  Omega-3 - yurak, miya va ko'z salomatligi
                                 uchun tabiiy qo'llab-quvvatlovchi!
                             </h2>
