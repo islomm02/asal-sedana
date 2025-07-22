@@ -25,7 +25,7 @@ function HomePage() {
             style={{ backgroundImage: "url('/bg-white.jpg')" }}
         >
             <div
-                className="absolute top-0 left-0  w-full sm:h-[600px] xl:h-[700px] 2xl:h-[800px] h-screen bg-cover bg-center bg-no-repeat opacity-80 -z-20"
+                className="absolute top-0 left-0  w-full sm:h-[600px] xl:h-[700px] 2xl:h-[1000px] h-screen bg-cover bg-center bg-no-repeat opacity-80 -z-20"
                 style={{ backgroundImage: "url('/sardor-bg.jpg')" }}
             />
 
